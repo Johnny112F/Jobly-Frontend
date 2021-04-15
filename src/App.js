@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import UserContext from "./UserContext";
 import {useEffect, useState } from "react";
@@ -11,19 +10,13 @@ import JoblyApi from './api';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isToken, setIsToken] = useState(false);
-
-  console.log(currentUser);
   
   useEffect(function getCurrentUser(){
     const token = localStorage.getItem("token");
     
     async function fetchUser(){
-     
       const decodedToken = decodeToken(token);
-      console.log(decodedToken);
-
       let userResult = await JoblyApi.getUser(decodedToken.username);
-      console.log(userResult, "return from api");
       setCurrentUser(userResult);
     }
 

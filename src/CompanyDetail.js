@@ -21,7 +21,7 @@ function CompanyDetail(){
       setIsLoading(false);
     }
     fetchData();
-  }, [ ]);
+  }, []);
 
   if (isLoading) return <i>Loading...</i>;
 

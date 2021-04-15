@@ -9,7 +9,7 @@ function CompanyCard({company}){
       <div className="companyCard-card">
         <h5>{company.name}.</h5>
         <p>{company.description}</p>
-        <img src={company.logoUrl} />
+        <img src={company.logoUrl} alt="company logo" />
       </div>
     </Link>
   )

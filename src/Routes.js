@@ -6,8 +6,6 @@ import JobList from "./JobList";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import ProfileForm from "./ProfileForm";
-import { useState } from "react";
-import JoblyApi from "./api";
 import UserContext from "./UserContext";
 import {useContext} from "react";
 
@@ -15,7 +13,6 @@ import {useContext} from "react";
 function Routes({login, signup}){
 //user state...possibly check true or false if user is logged in or not
   const {currentUser} = useContext(UserContext);
-  console.log(currentUser);
 
   return(
     <Switch>
